@@ -13,14 +13,14 @@ const generateContent = (viewId) =>
     ? Array.from({ length: 3 }, (_, i) => 
         div({ class: "card" }, 
           div({ class: "card-img" }),
-          h3({ class: "card-title" }, `Card Title ${i + 1}`),
+          h3({ class: "card-title" }, "Card Title " + (i + 1)),
           p({ class: "card-subtitle" }, "List item description text goes here")
         ))
     : Array.from({ length: 5 }, (_, i) => 
         div({ class: "list-item" }, 
           div({ class: "list-icon" }),
           div({ class: "list-content" }, 
-            h3({}, `List Item ${i + 1}`),
+            h3({}, "List Item " + (i + 1)),
             p({}, "List item description text goes here")
           )
         ));
