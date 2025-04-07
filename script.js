@@ -68,7 +68,7 @@ const initApp = () => {
   setTimeout(setupTouchGestures, 0);
   
   // Public API
-  window.MAE = {
+  window.MAVE = {
     goToView: goToView,
     getCurrentView: () => state.activeView.val
   };
