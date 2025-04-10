@@ -186,7 +186,7 @@ const AppBar = (viewId) =>
     button({ 
       class: "app-bar-button menu-toggle", 
       onclick: () => (state.isMenuOpen.val = true) 
-    }, "☰"),
+    }, "="),
     h2({ class: "view-title" }, 
       state.titles[viewId - 1] || `View ${viewId}`
     ),
@@ -194,7 +194,7 @@ const AppBar = (viewId) =>
       button({ 
         class: "app-bar-button options-toggle", 
         onclick: () => (state.isDropdownOpen.val = !state.isDropdownOpen.val) 
-      }, "⋮"),
+      }, ":"),
       DropdownMenu()
     )
   );
@@ -214,10 +214,10 @@ const NavItem = (viewId, icon, label) =>
 
 const BottomNav = () => 
   nav({ class: "bottom-nav" },
-    NavItem(1, "●", "Home"),
-    NavItem(2, "◆", "Explore"),
-    NavItem(3, "■", "Profile"),
-    NavItem(5, "▲", "Alerts")
+    NavItem(1, "#", "Home"),
+    NavItem(2, "$", "Explore"),
+    NavItem(3, "@", "Profile"),
+    NavItem(5, "&", "Alerts")
   );
 
 const Overlay = () =>
@@ -248,9 +248,9 @@ const DeviceWrapper = () =>
 
 const App = () => 
   div({ class: "app-container" },
-    h1({ class: "app-title" }, "Mobile App View Emulator"),
+    DeviceWrapper(),
     ViewControls(),
-    DeviceWrapper()
+    h1({ class: "app-title" }, "Mobile App View Emulator"),
   );
 
 // Render the app
