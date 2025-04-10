@@ -37,7 +37,6 @@ body {
   max-width: 400px;
 }
 .app-title {
-  margin-bottom: 24px;
   font-weight: 400;
   font-size: 30px;
 }
@@ -49,7 +48,7 @@ body {
 .view-controls {
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 .nav-arrow {
   width: 40px;
